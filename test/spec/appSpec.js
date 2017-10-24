@@ -28,11 +28,11 @@ describe('Siskel', function() {
 
   describe('Movie model like property', function() {
 
-    it('should start out true', function() {
+    it('👻 should start out true', function() {
       expect(model.get('like')).to.be.true;
     });
 
-    it('should toggle its state', function() {
+    it('👻 should toggle its state', function() {
       model.toggleLike();
       expect(model.get('like')).to.be.false;
     });
@@ -41,21 +41,21 @@ describe('Siskel', function() {
 
   describe('Movie collection', function() {
 
-    it('should have a default comparator for title', function() {
+    it('👻 should have a default comparator for title', function() {
       expect(collection.comparator).to.equal('title');
     });
 
-    it('should update its comparator', function() {
+    it('👻 should update its comparator', function() {
       collection.sortByField('rating');
       expect(collection.comparator).to.equal('rating');
     });
 
-    it('should trigger sort when the comparator is changed', function() {
+    it('👻 should trigger sort when the comparator is changed', function() {
       collection.sortByField('rating');
       expect(collection.sort).to.have.been.called;
     });
 
-    it('should trigger sort when a model changes', function() {
+    it('👻 should trigger sort when a model changes', function() {
       model.toggleLike();
       expect(collection.sort).to.have.been.called;
     });
