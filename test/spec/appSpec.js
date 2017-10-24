@@ -77,12 +77,12 @@ describe('Siskel', function() {
       Movie.prototype.toggleLike.restore();
     });
 
-    it('should re-render when the model changes', function() {
+    it('👻 should re-render when the model changes', function() {
       model.toggleLike();
       expect(modelView.render).to.have.been.called;
     });
 
-    it('should toggle like state of its model', function() {
+    it('👻 should toggle like state of its model', function() {
       modelView.handleClick();
       expect(model.toggleLike).to.have.been.called;
     });
@@ -102,7 +102,7 @@ describe('Siskel', function() {
       MoviesView.prototype.render.restore();
     });
 
-    it('should re-render when the collection sorts', function() {
+    it('👻 should re-render when the collection sorts', function() {
       collection.sort();
       expect(collectionView.render).to.have.been.called;
     });
